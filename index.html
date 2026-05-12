@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Habit Tracker</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- TOP HEADER -->
+
+    <div class="top">
+
+      <div class="month-section">
+
+        <h1 class="month">
+          November Habit Tracker
+        </h1>
+
+        <p class="subtitle">
+          Build consistency. Track your life.
+        </p>
+
+      </div>
+
+      <div class="stats">
+
+        <div class="card">
+
+          <h3>Total Habits</h3>
+
+          <p id="totalHabits">
+            0
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>Completed</h3>
+
+          <p id="completedHabits">
+            0
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>Progress</h3>
+
+          <p id="progressText">
+            0%
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>Level</h3>
+
+          <p id="levelText">
+            Beginner
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CONTROL BUTTONS -->
+
+    <div class="controls">
+
+      <button onclick="toggleDarkMode()">
+        Dark Mode
+      </button>
+
+      <button onclick="resetAll()">
+        Reset Progress
+      </button>
+
+      <button onclick="exportData()">
+        Export Data
+      </button>
+
+    </div>
+
+    <!-- ADD HABIT -->
+
+    <div class="add-habit">
+
+      <input
+        type="text"
+        id="habitInput"
+        placeholder="Add new habit..."
+      >
+
+      <button onclick="addHabit()">
+        Add Habit
+      </button>
+
+    </div>
+
+    <!-- HABIT TABLE -->
+
+    <div class="tracker">
+
+      <table id="habitTable">
+
+        <thead>
+
+          <tr>
+
+            <th class="habit-name">
+              My Habits
+            </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <!-- PROGRESS SECTION -->
+
+    <div class="progress-section">
+
+      <div class="progress-header">
+
+        <h2 class="progress-title">
+          Monthly Progress
+        </h2>
+
+        <span id="percentage">
+          0% Completed
+        </span>
+
+      </div>
+
+      <div class="progress-bar">
+
+        <div
+          class="progress-fill"
+          id="progressFill"
+        ></div>
+
+      </div>
+
+    </div>
+
+    <!-- MOTIVATION -->
+
+    <div class="motivation-box">
+
+      <h2>
+        Daily Reminder
+      </h2>
+
+      <p id="quoteText">
+        Discipline beats motivation.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- SCRIPT -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
