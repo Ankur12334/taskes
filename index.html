@@ -12,6 +12,11 @@
 
   <title>Habit Tracker</title>
 
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -26,8 +31,8 @@
 
       <div class="month-section">
 
-        <h1 class="month">
-          November Habit Tracker
+        <h1 class="month" id="monthTitle">
+          Current Month
         </h1>
 
         <p class="subtitle">
@@ -87,15 +92,20 @@
     <div class="controls">
 
       <button onclick="toggleDarkMode()">
-        Dark Mode
+        <span class="icon">🌓</span> Dark Mode
       </button>
 
       <button onclick="resetAll()">
-        Reset Progress
+        <span class="icon">🔄</span> Reset Progress
       </button>
 
       <button onclick="exportData()">
-        Export Data
+        <span class="icon">⬇️</span> Export Data
+      </button>
+
+      <input type="file" id="importInput" accept=".json" style="display: none;" onchange="importData(event)">
+      <button onclick="document.getElementById('importInput').click()">
+        <span class="icon">⬆️</span> Import Data
       </button>
 
     </div>
@@ -124,7 +134,7 @@
 
         <thead>
 
-          <tr>
+          <tr id="tableHeaderRow">
 
             <th class="habit-name">
               My Habits
